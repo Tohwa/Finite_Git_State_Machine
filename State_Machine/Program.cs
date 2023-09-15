@@ -9,13 +9,6 @@ namespace State_Machine
 
         static void Main(string[] args)
         {
-            stateMachine.Start();
-
-            while (true)
-            {
-                stateMachine.Update();
-            }
-
 
         }
 
