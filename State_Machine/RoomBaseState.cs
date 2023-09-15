@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace State_Machine
 {
-    abstract class MovementBaseState : IStates
+    abstract class RoomBaseState : IStates
     {
         public virtual void EnterState()
         {

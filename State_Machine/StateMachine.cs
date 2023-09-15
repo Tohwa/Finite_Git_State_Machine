@@ -12,7 +12,7 @@ namespace State_Machine
 
         public void Start()
         {
-            curState = new IdleState();
+            //curState = 
             curState.EnterState();
         }
 
