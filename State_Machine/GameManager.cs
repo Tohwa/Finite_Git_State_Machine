@@ -8,8 +8,8 @@ namespace State_Machine
 {
     internal class GameManager
     {
-        public bool item1 = false;
-        public bool item2 = false;
-        public bool item3 = false;
+        public bool letter = false;
+        public bool map = false;
+        public bool flashlight = false;
     }
 }

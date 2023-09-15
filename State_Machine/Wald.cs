@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,6 +16,14 @@ namespace State_Machine
         }
         public override IStates CheckState()
         {
+            if (Console.KeyAvailable)
+            {
+
+                if (Console.ReadKey().Key == ConsoleKey.W)
+                {
+                    return null;
+                }
+            }
             return null;
         }
 
