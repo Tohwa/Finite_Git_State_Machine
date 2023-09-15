@@ -18,13 +18,6 @@ namespace State_Machine
             Console.WriteLine("You have entered the northern room.");
         }
 
-        /*
-         * public override void UpdateState()
-        {
-            Console.WriteLine("Ich bin WALKING dead immer noch?");
-        }
-        */
-
         public override IStates CheckState()
         {
             if (Console.KeyAvailable)
