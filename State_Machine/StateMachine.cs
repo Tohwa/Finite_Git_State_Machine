@@ -12,7 +12,7 @@ namespace State_Machine
 
         public void Init()
         {
-            curState = new Marktplatz();
+            curState = new DasGericht();
             curState.EnterState();
         }
 

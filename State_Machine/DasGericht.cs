@@ -289,7 +289,7 @@ namespace State_Machine
                 Console.WriteLine("Der Angeklagte wird für schuldig gesprochen!");
                 GameManager.item1 = true;
                 
-                return null; //return new Raum2();
+                return new Marktplatz(); //return new Raum2();
 
             }
 

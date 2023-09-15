@@ -10,7 +10,6 @@ namespace State_Machine
 {
     internal class Marktplatz : RoomBaseState
     {
-        public static GameManager GameManager = new GameManager();
         //Item1 Brief
         //Item2 Reisekarte
         //Item3 Tascahenlampe

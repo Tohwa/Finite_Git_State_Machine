@@ -9,8 +9,9 @@ namespace State_Machine
 
         static void Main(string[] args)
         {
-            stateMachine.Start();
-            while(!gameManager.letter && !gameManager.map && !gameManager.flashlight && !gameManager.winConditions)
+            stateMachine.Init();
+
+            while(!GameManager.letter && !GameManager.map && !GameManager.flashlight && !GameManager.winConditions || !GameManager.item1 && !GameManager.item2 && !GameManager.item3)
             {
                 stateMachine.Update();
             }

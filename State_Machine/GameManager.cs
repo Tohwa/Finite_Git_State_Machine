@@ -8,9 +8,13 @@ namespace State_Machine
 {
     internal static class GameManager
     {
-        public bool letter = false;
-        public bool map = false;
-        public bool flashlight = false;
-        public bool winConditions = false;
+        public static bool letter = false;
+        public static bool map = false;
+        public static bool flashlight = false;
+        public static bool winConditions = false;
+
+        public static bool item1 = false;
+        public static bool item2 = false;
+        public static bool item3 = false;
     }
 }
