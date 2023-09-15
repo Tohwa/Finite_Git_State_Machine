@@ -12,7 +12,7 @@ namespace State_Machine
 
         public void Start()
         {
-            curState = new Wald();
+            curState = new Marktplatz();
             curState.EnterState();
         }
 

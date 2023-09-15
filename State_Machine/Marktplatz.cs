@@ -22,9 +22,9 @@ namespace State_Machine
                               "und die Menschen schlendern gemütlich über den beleuchteten Marktplatz. Du der Weihnachtsmagier, " +
                               "bekannt für seine magischen Fähigkeiten, hat gerade seinen Tisch mit einer Tischdecke aus funkelndem " +
                               "Tannengrün geschmückt und blättert durch einen Stapel Briefe von Kindern, die alle ihre Wünsche an den " +
-                              "Weihnachtsmann geschickt haben.",1000);
+                              "Weihnachtsmann geschickt haben.", 1000);
             TextAnimateTime("Plötzlich findest du einen Brief, der anders ist als die anderen. Es ist ein königlicher Siegelbrief " +
-                            "mit einer Aufforderung vom König höchstpersönlich.",1000);
+                            "mit einer Aufforderung vom König höchstpersönlich.", 1000);
 
             TextAnimate("Willst du den Brief öffnen und ihn lesen?\n");
             TextAnimate("[J]a, [N]ein\n");
@@ -38,7 +38,8 @@ namespace State_Machine
                 {
                     case ConsoleKey.J:
                         {
-                            GameManager.item1 = true;
+                            GameManager.letter = true;
+                            FrAnt = true;
                             TextAnimate("Der Brief des Königs:\n");
                             TextAnimateTime("Euer erhabener Weihnachtsmagier,\r\n\r\n" +
                                             "Mit schwerem Herzen wende ich mich an Euch in diesen finsteren Tagen. " +
@@ -59,10 +60,11 @@ namespace State_Machine
 
                     case ConsoleKey.N:
                         {
-                            GameManager.item1 = false;
-                            TextAnimateTime("Du öffnest also nicht den Brief des Königs und machst stattdessen mit den Briefen der Kinder weiter",500);
+                            FrAnt = true;
+                            TextAnimateTime("Du öffnest also nicht den Brief des Königs und machst stattdessen mit den Briefen der Kinder weiter", 500);
                             TextAnimateTime("Abends kommst du in deiner kleinen Waldhütte an und verbringst den Abend damit " +
                                 "dich zu fragen was der Brief wohl für geheime informationen enthielt", 1000);
+                            Console.Clear();
                             break;
                         }
                     default:
@@ -70,18 +72,27 @@ namespace State_Machine
                             Console.Clear();
                             TextAnimateTime("Bitte entscheide dich ob du den Brief öffnen willst oder nicht!\n", 1000);
                             FrAnt = false;
+                            break;
                         }
-                        break;
+                        
                 }
             }
-            if(GameManager.item1 == true)
+            if (GameManager.letter == true)
             {
                 TextAnimate("Du schaust erschrocken nach oben, stehst sofort auf und machst dich auf den Weg, der Einladung des Königs nachzukommen");
+                Console.Clear();
             }
         }
         public override IStates CheckState()
         {
-            return null;
+            if (Console.ReadKey().Key == ConsoleKey.W)
+            {
+                return new Wald();
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public override void UpdateState()
