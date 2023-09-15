@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace State_Machine
 {
-    internal class GameManager
+    internal static class GameManager
     {
         public bool letter = false;
         public bool map = false;

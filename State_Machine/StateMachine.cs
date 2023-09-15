@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +10,7 @@ namespace State_Machine
     {
         private IStates curState;
 
-        public void Start()
+        public void Init()
         {
             curState = new Marktplatz();
             curState.EnterState();
