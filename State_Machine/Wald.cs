@@ -31,9 +31,9 @@ namespace State_Machine
            
         }
 
-        public override Void ExitState()
+        public override void ExitState()
         {
-            Console.WriteLine("Du verlässt den Wald!);
+            Console.WriteLine("Du verlässt den Wald!");
         }
     }
 }
