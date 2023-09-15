@@ -11,5 +11,6 @@ namespace State_Machine
         public bool letter = false;
         public bool map = false;
         public bool flashlight = false;
+        public bool winConditions = false;
     }
 }

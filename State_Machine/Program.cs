@@ -11,7 +11,7 @@ namespace State_Machine
         static void Main(string[] args)
         {
             stateMachine.Start();
-            while(!gameManager.letter && !gameManager.map && !gameManager.flashlight)
+            while(!gameManager.letter && !gameManager.map && !gameManager.flashlight && !gameManager.winConditions)
             {
                 stateMachine.Update();
             }
