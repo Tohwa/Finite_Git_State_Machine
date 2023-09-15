@@ -10,6 +10,7 @@ namespace State_Machine
 
         static void Main(string[] args)
         {
+            stateMachine.Start();
             while(!gameManager.item1 && !gameManager.item2 && !gameManager.item3)
             {
                 stateMachine.Update();
