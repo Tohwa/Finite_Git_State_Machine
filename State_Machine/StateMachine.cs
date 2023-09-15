@@ -10,9 +10,9 @@ namespace State_Machine
     {
         private IStates curState;
 
-        public void Start()
+        public void Init()
         {
-            //curState = 
+            curState = new DasGericht();
             curState.EnterState();
         }
 

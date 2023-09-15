@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace State_Machine
 {
-    internal class GameManager
+    internal static class GameManager
     {
-        public bool item1 = false;
-        public bool item2 = false;
-        public bool item3 = false;
+        public static bool item1 = false;
+        public static bool item2 = false;
+        public static bool item3 = false;
     }
 }
