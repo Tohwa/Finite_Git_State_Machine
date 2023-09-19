@@ -16,15 +16,20 @@ namespace State_Machine
         //Item4 Key
         public override void EnterState()
         {
-            TextAnimateTime("Sitzend am Stadtbrunnen, rechnet Du, unser überzeugungstarker Weihnachtsmagier die Kosten der Geschenke aus. " +
-                              "Es ist eine kalte Dezembernacht, der Schnee glitzerte im fahlen Licht der Laternen, " +
-                              "und die Menschen schlendern gemütlich über den beleuchteten Marktplatz. Du der Weihnachtsmagier, " +
-                              "bekannt für seine magischen Fähigkeiten, hat gerade seinen Tisch mit einer Tischdecke aus funkelndem " +
-                              "Tannengrün geschmückt und blättert durch einen Stapel Briefe von Kindern, die alle ihre Wünsche an den " +
-                              "Weihnachtsmann geschickt haben.", 1000);
-            TextAnimateTime("Plötzlich findest du einen Brief, der anders ist als die anderen. Es ist ein königlicher Siegelbrief " +
-                            "mit einer Aufforderung vom König höchstpersönlich.", 1000);
-
+            TextAnimate("Sitzend am Stadtbrunnen, rechnet Du, unser überzeugungstarker Weihnachtsmagier die Kosten der Geschenke aus.\n" +
+                              "Es ist eine kalte Dezembernacht, der Schnee glitzerte im fahlen Licht der Laternen,\n" +
+                              "und die Menschen schlendern gemütlich über den beleuchteten Marktplatz. Du der Weihnachtsmagier,\n" +
+                              "bekannt für seine magischen Fähigkeiten, hat gerade seinen Tisch mit einer Tischdecke aus funkelndem\n" +
+                              "Tannengrün geschmückt und blättert durch einen Stapel Briefe von Kindern, die alle ihre Wünsche an den\n" +
+                              "Weihnachtsmann geschickt haben.");
+            TextAnimate("\n\nEnter");
+            Console.ReadKey(true);
+            Console.Clear();
+            TextAnimate("Plötzlich findest du einen Brief, der anders ist als die anderen. Es ist ein königlicher Siegelbrief\n" +
+                            "mit einer Aufforderung vom König höchstpersönlich.");
+            TextAnimate("\n\nEnter");
+            Console.ReadKey(true);
+            Console.Clear();
             TextAnimate("Willst du den Brief öffnen und ihn lesen?\n");
             TextAnimate("[J]a, [N]ein\n");
             bool FrAnt = false;
@@ -40,29 +45,37 @@ namespace State_Machine
                             GameManager.letter = true;
                             FrAnt = true;
                             TextAnimate("Der Brief des Königs:\n");
-                            TextAnimateTime("Euer erhabener Weihnachtsmagier,\r\n\r\n" +
-                                            "Mit schwerem Herzen wende ich mich an Euch in diesen finsteren Tagen. " +
-                                            "Die Dunkelheit hat unser Königreich umhüllt, und unsere Prinzessin ist in den " +
-                                            "Fängen eines teuflischen Zauberers gefangen, dessen Macht und Bosheit die Grenzen " +
+                            TextAnimate("Euer erhabener Weihnachtsmagier,\r\n\r\n" +
+                                            "Mit schwerem Herzen wende ich mich an Euch in diesen finsteren Tagen.\n" +
+                                            "Die Dunkelheit hat unser Königreich umhüllt, und unsere Prinzessin ist in den\n" +
+                                            "Fängen eines teuflischen Zauberers gefangen, dessen Macht und Bosheit die Grenzen\n" +
                                             "des Verstandes überschreiten.\r\n\r\nNur Ihr, großer Magier, besitzt die Gabe und das Wissen, " +
-                                            "diese Bedrohung zu bezwingen. Die Freude und das Licht der Weihnachtszeit sind in Gefahr, " +
-                                            "und ich flehe Euch an, zu uns zu eilen und die Prinzessin zu befreien. Sie ist das Herz " +
+                                            "diese Bedrohung zu bezwingen.\nDie Freude und das Licht der Weihnachtszeit sind in Gefahr, " +
+                                            "und ich flehe Euch an, zu uns zu eilen\nund die Prinzessin zu befreien. Sie ist das Herz " +
                                             "unseres Königreichs und das Strahlen in den Augen unserer Untertanen.\r\n\r\n" +
-                                            "Ich weiß, dass die Zeit unser Feind ist, und doch hoffe ich, dass Ihr in Eurer " +
-                                            "unermüdlichen Güte und Macht die Dunkelheit vertreiben könnt. Ein großzügiger Lohn " +
-                                            "und der ewige Dank meines Reiches erwarten Euch, wenn Ihr diese Mission erfolgreich beendet. " +
-                                            "Bitte komme so schnell wie möglich zu meinem Königlichen Schloss und hole dir die Karte zum" +
+                                            "Ich weiß, dass die Zeit unser Feind ist, und doch hoffe ich, dass Ihr in Eurer\n" +
+                                            "unermüdlichen Güte und Macht die Dunkelheit vertreiben könnt. Ein großzügiger Lohn\n" +
+                                            "und der ewige Dank meines Reiches erwarten Euch, wenn Ihr diese Mission erfolgreich beendet.\n" +
+                                            "Bitte komme so schnell wie möglich zu meinem Königlichen Schloss\nund hole dir die Karte zum" +
                                             "\r\n\r\nEuer demütiger König, im Angesicht der Dunkelheit und des Glanzes der Weihnachtszeit," +
-                                            "\r\nKönig Purzel", 2000);
+                                            "\r\nKönig Purzel");
+                            TextAnimate("\n\nEnter");
+                            Console.ReadKey(true);
+                            Console.Clear();
                             break;
                         }
 
                     case ConsoleKey.N:
                         {
                             FrAnt = true;
-                            TextAnimateTime("Du öffnest also nicht den Brief des Königs und machst stattdessen mit den Briefen der Kinder weiter", 500);
-                            TextAnimateTime("Abends kommst du in deiner kleinen Waldhütte an und verbringst den Abend damit " +
-                                "dich zu fragen was der Brief wohl für geheime informationen enthielt", 1000);
+                            TextAnimate("Du öffnest also nicht den Brief des Königs und machst stattdessen mit den Briefen der Kinder weiter");
+                            TextAnimate("\n\nEnter");
+                            Console.ReadKey(true);
+                            Console.Clear();
+                            TextAnimate("Abends kommst du in deiner kleinen Waldhütte an und verbringst den Abend damit " +
+                                "dich zu fragen was der Brief wohl für geheime informationen enthielt");
+                            TextAnimate("\n\nEnter");
+                            Console.ReadKey(true);
                             Console.Clear();
                             break;
                         }
@@ -79,6 +92,16 @@ namespace State_Machine
             if (GameManager.letter == true)
             {
                 TextAnimate("Du schaust erschrocken nach oben, stehst sofort auf und machst dich auf den Weg, der Einladung des Königs nachzukommen");
+                TextAnimate("\n\nEnter");
+                Console.ReadKey(true);
+                Console.Clear();
+
+                TextAnimate("Drücke \"W\" um in das Schloss des Königs zu gelangen");
+                TextAnimate("\n\nEnter");
+                Console.ReadKey(true);
+                Console.Clear();
+
+
                 Console.Clear();
             }
         }
@@ -115,7 +138,7 @@ namespace State_Machine
                 for (int i = 0; i < letters.Length; i++)
                 {
                     Console.Write(letters[i]);
-                    Thread.Sleep(1);
+                    Thread.Sleep(20);
                 }
             }
 
